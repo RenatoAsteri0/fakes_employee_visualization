@@ -1,8 +1,7 @@
 from datetime import datetime
 from io import BytesIO
+from pathlib import Path
 import random
-from os import getenv
-from dotenv import load_dotenv
 import pandas as pd
 from faker import Faker
 from google.cloud import storage
@@ -10,16 +9,14 @@ from google.cloud import storage
 # ============================================================================
 # Configuration
 # ============================================================================
-load_dotenv()
-PROJECT_ID = getenv(PROJECT_ID)
-BUCKET_NAME = getenv(BUCKET_NAME)
-
+PROJECT_ID = 'synthetic-employee-data'
+BUCKET_NAME = 'bkp-synthetic-employee-data'
 NUM_EMPLOYEES = 100
 
 today = datetime.now().strftime("%Y%m%d")
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-DESTINATION_BLOB = "employee_data.parquet"
+DESTINATION_BLOB = "employee_data.csv"
 
 # ============================================================================
 # Faker
@@ -163,9 +160,8 @@ blob = bucket.blob(DESTINATION_BLOB)
 
 buffer = BytesIO()
 
-df.to_parquet(
+df.to_csv(
     buffer,
-    engine="pyarrow",
     index=False,
 )
 
