@@ -142,8 +142,13 @@ Após o processamento, os dados são carregados automaticamente no BigQuery, ond
 Adicionar imagens como:
 
 - DAG executando no Airflow
+<img src="screenshots/dag.png" width="900">
 - Pipeline no Cloud Data Fusion
+<img src="screenshots/datafusion.png" width="900">
 - Dados carregados no BigQuery
+<img src="screenshots/bigquery.png" width="900">
+- Informações no BI
+<img src="screenshots/looker.png" width="900">
 
 ---
 
