@@ -14,26 +14,7 @@ Todo o fluxo é orquestrado pelo **Apache Airflow**, executado no **Cloud Compos
 
 # 🏗 Arquitetura
 
-```text
-                    +----------------------+
-                    |  Python (Extract)   |
-                    +----------+-----------+
-                               |
-                               v
-                  Google Cloud Storage
-                               |
-                               v
-                Cloud Data Fusion Pipeline
-            - Data Masking
-            - Data Encoding
-            - Data Transformation
-                               |
-                               v
-                     Google BigQuery
-                               ^
-                               |
-           Cloud Composer (Apache Airflow)
-```
+<img src="employee-report-project.png" width="900">
 
 ---
 
