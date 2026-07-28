@@ -14,7 +14,7 @@ Todo o fluxo é orquestrado pelo **Apache Airflow**, executado no **Cloud Compos
 
 # 🏗 Arquitetura
 
-<img src="employee-report-project.png" width="900">
+<img src="screenshots/employee-report-project.png" width="900">
 
 ---
 
